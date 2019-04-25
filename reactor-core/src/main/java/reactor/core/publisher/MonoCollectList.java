@@ -31,6 +31,17 @@ import reactor.util.annotation.Nullable;
  * @param <T> the source value type
  * @param <C> the collection type that takes any supertype of T
  */
+/*
+ * The following comment is a operator codification meant to be searchable.
+ * See https://github.com/reactor/reactor-core/issues/1673 for a
+ * complete description of each element codified and the associated values.
+ *
+ * {REQUEST_SHAPING}: NONE
+ * {PREFETCH}: UNBOUNDED
+ * {BUFFERING}: OPERATION-MULTIPLE
+ * {GEOMETRY}: N-1
+ * {SOURCE}: FLUX
+ */
 final class MonoCollectList<T, C extends Collection<? super T>>
 		extends MonoFromFluxOperator<T, C>
 		implements Fuseable {
