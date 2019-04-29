@@ -260,6 +260,11 @@ public class HooksTraceTest {
 					public void onComplete() {
 						sub.onComplete();
 					}
+
+					@Override
+					public void onCancelled() {
+						sub.onCancelled();
+					}
 				}));
 
 		StepVerifier.create(Flux.just(1, 2, 3)
@@ -307,6 +312,11 @@ public class HooksTraceTest {
 					@Override
 					public void onComplete() {
 						sub.onComplete();
+					}
+
+					@Override
+					public void onCancelled() {
+						sub.onCancelled();
 					}
 				}));
 
@@ -374,6 +384,11 @@ public class HooksTraceTest {
 					@Override
 					public void onComplete() {
 						sub.onComplete();
+					}
+
+					@Override
+					public void onCancelled() {
+						sub.onCancelled();
 					}
 				}));
 
