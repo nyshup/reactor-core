@@ -2089,6 +2089,7 @@ public abstract class Operators {
 				Operators.onDiscard(value, actual.currentContext());
 			}
 			ONCE.lazySet(this, 2);
+			actual.onCancelled();
 		}
 
 		@Override
