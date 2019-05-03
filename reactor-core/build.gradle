@@ -155,6 +155,11 @@ javadoc {
   maxMemory = "1024m"
   destinationDir = new File(project.buildDir, "docs/javadoc")
 
+  excludes = [
+		  // Must be public due to the ServiceLoader's requirements
+		  "reactor/core/scheduler/ReactorBlockHoundIntegration.java",
+  ]
+
   doLast {
 	// work around https://github.com/gradle/gradle/issues/4046
 	copy {
