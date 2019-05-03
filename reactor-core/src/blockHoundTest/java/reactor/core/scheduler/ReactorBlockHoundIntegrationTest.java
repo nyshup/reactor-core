@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package reactor.core;
+package reactor.core.scheduler;
 
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
@@ -26,6 +26,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 import reactor.blockhound.BlockHound;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.ReactorBlockHoundIntegration;
 import reactor.core.scheduler.Schedulers;
 
 public class ReactorBlockHoundIntegrationTest {
